@@ -1,0 +1,30 @@
+
+. Cache and back up
+
+The service will work from the cache for all the features, the file system it is only for back up.
+Before saving to disk should do a back up and erase and then save.
+
+. Thread save
+
+The data structure for the map must be thread save, also the writing on the file.
+
+. Format convention
+
+Data inbound and outbound will be in a Json format when involves a list, if not will be number of action, key value, example
+for right add:
+
+    2 thisKey aValue
+
+.Cron job
+
+an executor for a thread running up every X configuration minutes to back up cache on file system.
+
+.Atomic Transactions 
+
+All actions of filesystem related should be inside transactions to ROLBACK in case of errors
+
+TODO
+
+.Regix for getallKeys for pattern*
+
+
